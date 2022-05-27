@@ -4,9 +4,9 @@ export const Styled = {
     App: styled.header`
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-content: center;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-content: stretch;
         align-items: center;
     `,
 };
