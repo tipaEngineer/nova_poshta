@@ -1,10 +1,13 @@
 import React from 'react';
+import { Styled } from './AppStyle';
+import { Header } from './components/Header/Header';
 
 function App() {
     return (
-        <div>
+        <Styled.App>
             <div>Hello world</div>
-        </div>
+            <Header />
+        </Styled.App>
     );
 }
 
