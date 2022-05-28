@@ -11,11 +11,13 @@ export const SearchModule: React.FC = () => {
                     <input type={'submit'} />
                 </form>
                 <a href={'/'}>
-                    <span>Укр</span>
+                    <span>Укр </span>
                 </a>
+
                 <a href={'/ru'}>
-                    <span>Рус</span>
+                    <span>Рус </span>
                 </a>
+
                 <a href={'en'}>
                     <span>En</span>
                 </a>
