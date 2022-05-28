@@ -3,10 +3,11 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   * { 
     font-family: "HelvetiaNeue", "Arial";
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     outline: yellow;
     
+        
   }
    
 

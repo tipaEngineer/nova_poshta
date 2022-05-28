@@ -1,11 +1,13 @@
 import React from 'react';
 import NP_logo from '../../../../../assets/NP_Logo.png';
-import { LogoStyle } from './LogoStyle';
+import { StyledHeaderElement } from '../HeaderElementStyle';
 
 export const Logo: React.FC = () => {
     return (
-        <LogoStyle.Logo>
-            <img src={NP_logo} alt={'Логотоип Нової пошти'} />
-        </LogoStyle.Logo>
+        <StyledHeaderElement.HeaderElementItem>
+            <div>
+                <img src={NP_logo} alt={'Логотоип Нової пошти'} />
+            </div>
+        </StyledHeaderElement.HeaderElementItem>
     );
 };
