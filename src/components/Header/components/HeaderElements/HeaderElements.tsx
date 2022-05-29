@@ -3,18 +3,20 @@ import { StyledHeaderElement } from './HeaderElementStyle';
 import { Logo } from './components/Logo';
 import { Autorization } from './components/Autorization';
 import { SearchModule } from './components/SearchModule';
-import { HeaderStyle } from '../../HeaderStyle';
+
 import { TechnikalSupport } from './components/TechnikalSupport';
 
 export const HeaderElements: React.FC = () => {
     return (
-        <HeaderStyle.HeaderItem>
-            <StyledHeaderElement.WrappedHeaderElement>
+        <StyledHeaderElement.WrappedHeaderElement id="WrappedHeaderElement">
+            <StyledHeaderElement.HeaderElementItem>
                 <Logo />
+            </StyledHeaderElement.HeaderElementItem>
+            <StyledHeaderElement.HeaderElementItem>
                 <Autorization />
                 <SearchModule />
                 <TechnikalSupport />
-            </StyledHeaderElement.WrappedHeaderElement>
-        </HeaderStyle.HeaderItem>
+            </StyledHeaderElement.HeaderElementItem>
+        </StyledHeaderElement.WrappedHeaderElement>
     );
 };

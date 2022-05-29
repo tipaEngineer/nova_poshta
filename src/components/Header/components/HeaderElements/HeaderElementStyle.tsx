@@ -3,10 +3,8 @@ import styled from 'styled-components';
 export const StyledHeaderElement = {
     WrappedHeaderElement: styled.div`
         display: flex;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
     `,
-    HeaderElementItem: styled.div`
-        display: flex;
-        flex: 1;
-    `,
+    HeaderElementItem: styled.div``,
 };

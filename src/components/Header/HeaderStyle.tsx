@@ -4,9 +4,12 @@ export const HeaderStyle = {
     WrappedHeader: styled.div`
         display: flex;
         flex-direction: column;
+        flex-wrap: nowrap;
     `,
-    HeaderItem: styled.div`
-        display: flex;
-        flex: 1;
+    HeaderBanner: styled.div`
+        order: 0;
+    `,
+    HeaderElements: styled.div`
+        order: 1;
     `,
 };

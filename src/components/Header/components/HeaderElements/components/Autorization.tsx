@@ -1,20 +1,20 @@
 import React from 'react';
-
-import { StyledHeaderElement } from '../HeaderElementStyle';
+import { AutorizationStyle } from './AutorizationStyle';
 
 export const Autorization: React.FC = () => {
     return (
-        <StyledHeaderElement.HeaderElementItem>
-            <div>
+        <div>
+            <AutorizationStyle.LinkDekoration>
                 <a href="https://new.novaposhta.ua/">
                     <span>Вхід</span>
                 </a>
-
-                <> і </>
+            </AutorizationStyle.LinkDekoration>
+            <> і </>
+            <AutorizationStyle.LinkDekoration>
                 <a href="https://new.novaposhta.ua/">
                     <span>реєстрація</span>
                 </a>
-            </div>
-        </StyledHeaderElement.HeaderElementItem>
+            </AutorizationStyle.LinkDekoration>
+        </div>
     );
 };

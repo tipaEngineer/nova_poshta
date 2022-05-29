@@ -6,8 +6,12 @@ import { HeaderStyle } from './HeaderStyle';
 export const Header: React.FC = () => {
     return (
         <HeaderStyle.WrappedHeader>
-            <Banner />
-            <HeaderElements />
+            <HeaderStyle.HeaderBanner id={'Banner'}>
+                <Banner />
+            </HeaderStyle.HeaderBanner>
+            <HeaderStyle.HeaderElements id={'elements'}>
+                <HeaderElements />
+            </HeaderStyle.HeaderElements>
         </HeaderStyle.WrappedHeader>
     );
 };
