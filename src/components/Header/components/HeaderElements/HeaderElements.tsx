@@ -9,13 +9,14 @@ import { TechnikalSupport } from './components/TechnikalSupport';
 export const HeaderElements: React.FC = () => {
     return (
         <StyledHeaderElement.WrappedHeaderElement id="WrappedHeaderElement">
+            <Logo />
+
             <StyledHeaderElement.HeaderElementItem>
-                <Logo />
-            </StyledHeaderElement.HeaderElementItem>
-            <StyledHeaderElement.HeaderElementItem>
-                <Autorization />
-                <SearchModule />
-                <TechnikalSupport />
+                <StyledHeaderElement.WrappedLogoSearchSupportElements id="WrappedLogoSearchSupportElements">
+                    <Autorization />
+                    <SearchModule />
+                    <TechnikalSupport />
+                </StyledHeaderElement.WrappedLogoSearchSupportElements>
             </StyledHeaderElement.HeaderElementItem>
         </StyledHeaderElement.WrappedHeaderElement>
     );

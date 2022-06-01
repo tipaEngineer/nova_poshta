@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AboutCompanyMenu } from './components/Header/components/MainMenu/AboutCompanyMenu';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     <React.StrictMode>
         <App />
+        <div id={'sdsdsds'}>
+            <AboutCompanyMenu />
+        </div>
     </React.StrictMode>,
 );
 

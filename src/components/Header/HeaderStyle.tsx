@@ -4,7 +4,7 @@ export const HeaderStyle = {
     WrappedHeader: styled.div`
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     `,
     HeaderBanner: styled.div`
         order: 0;
