@@ -14,7 +14,7 @@ root.render(
         <App />
         <div id={'sdsdsds'}>
             <AboutCompanyMenu />
-            <MainMenu name={MenuIte[1].name} id={MenuIte[0].id} />
+            <MainMenu allMenu={MenuIte} />
         </div>
     </React.StrictMode>,
 );
