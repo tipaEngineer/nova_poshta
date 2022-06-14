@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface SubMenuItems {
-    items: string[];
+    items?: string[];
 }
 
 export const SubMenu: React.FC<SubMenuItems> = ({ items }) => {
@@ -9,7 +9,7 @@ export const SubMenu: React.FC<SubMenuItems> = ({ items }) => {
     return (
         <div>
             <ul>
-                {items.map((value, index) => (
+                {items?.map((value, index) => (
                     <li key={index}>{value}</li>
                 ))}
             </ul>

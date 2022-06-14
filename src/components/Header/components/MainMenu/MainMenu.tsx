@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { SubMenu } from './components/SubMenu';
 
 export interface MenuProps {
     id: number;
@@ -9,11 +10,24 @@ export interface MenuItems {
     items: MenuProps[];
 }
 export const MainMenu: React.FC<MenuItems> = ({ items }) => {
+    const [onMenuFocus, setOnMenuFocus] = useState(false);
+
     return (
         <div>
             <ul>
                 {items.map((value) => (
-                    <li key={value.id}>{value.name}</li>
+                    <div>
+                        <li
+                            key={value.id}
+                            onMouseOver={(event) => {
+                                console.log(event.target);
+                                setOnMenuFocus(!onMenuFocus);
+                            }}
+                        >
+                            {value.name}
+                        </li>
+                        {!onMenuFocus ? <></> : <SubMenu items={value.sub} />}
+                    </div>
                 ))}
             </ul>
         </div>
