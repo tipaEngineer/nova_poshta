@@ -2,20 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { AboutCompanyMenu } from './components/Header/components/MainMenu/AboutCompanyMenu';
+
+import ItemsMenu from './components/Header/components/MainMenu/Menu.json';
 import { MainMenu } from './components/Header/components/MainMenu/MainMenu';
-import MenuIte from './components/Header/components/MainMenu/Menu.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-console.log(MenuIte);
+console.log(ItemsMenu);
+console.log(ItemsMenu[0]);
 
 root.render(
     <React.StrictMode>
         <App />
-        <div id={'sdsdsds'}>
-            <AboutCompanyMenu />
-            <MainMenu allMenu={MenuIte} />
-        </div>
+        <MainMenu items={ItemsMenu} />
     </React.StrictMode>,
 );
 

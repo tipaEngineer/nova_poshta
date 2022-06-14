@@ -1,19 +1,21 @@
 import React from 'react';
 
-export interface ItemMenu {
+export interface MenuProps {
     id: number;
     name: string;
     sub?: Array<string>;
 }
-
-export interface AllMenu {
-    allMenu: Array<ItemMenu>;
+export interface MenuItems {
+    items: MenuProps[];
 }
-
-export const MainMenu: React.FC<AllMenu> = ({ allMenu }) => {
-    const MENU: JSX.Element[] = [];
-    allMenu.forEach((value) => {
-        MENU.push(<li key={value.id}>{value.name}</li>);
-    });
-    return <ul>{MENU}</ul>;
+export const MainMenu: React.FC<MenuItems> = ({ items }) => {
+    return (
+        <div>
+            <ul>
+                {items.map((value) => (
+                    <li key={value.id}>{value.name}</li>
+                ))}
+            </ul>
+        </div>
+    );
 };
