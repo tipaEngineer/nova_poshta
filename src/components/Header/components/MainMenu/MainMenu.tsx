@@ -10,7 +10,7 @@ export interface MenuItems {
     items: MenuProps[];
 }
 export const MainMenu: React.FC<MenuItems> = ({ items }) => {
-    const [onMenuFocus, setOnMenuFocus] = useState(false);
+    const [subMenuActive, setActiveSubMenu] = useState(-1);
 
     return (
         <div>
@@ -19,14 +19,15 @@ export const MainMenu: React.FC<MenuItems> = ({ items }) => {
                     <div>
                         <li
                             key={value.id}
-                            onMouseOver={(event) => {
-                                console.log(event.target);
-                                setOnMenuFocus(!onMenuFocus);
+                            onMouseOut={() => setActiveSubMenu(-1)}
+                            onMouseOver={() => {
+                                console.log(value.id);
+                                setActiveSubMenu(value.id);
                             }}
                         >
                             {value.name}
                         </li>
-                        {!onMenuFocus ? <></> : <SubMenu items={value.sub} />}
+                        {subMenuActive !== value.id ? <></> : <SubMenu items={value.sub} />}
                     </div>
                 ))}
             </ul>
