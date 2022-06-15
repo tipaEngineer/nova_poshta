@@ -29,7 +29,9 @@ export const MainMenu: React.FC<MenuItems> = ({ items }) => {
                         setActiveSubMenu(value.id);
                     }}
                 >
-                    {value.name}
+                    <MainMenuStyle.WrappedItemElement>
+                        {value.name}
+                    </MainMenuStyle.WrappedItemElement>
                     {subMenuActive !== value.id ? <></> : <SubMenu items={value.sub} />}
                 </div>
             ))}

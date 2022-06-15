@@ -7,11 +7,9 @@ interface SubMenuItems {
 export const SubMenu: React.FC<SubMenuItems> = ({ items }) => {
     return (
         <div>
-            <ul>
-                {items?.map((value, index) => (
-                    <li key={index}>{value}</li>
-                ))}
-            </ul>
+            {items?.map((value, index) => (
+                <div key={index}>{value}</div>
+            ))}
         </div>
     );
 };
