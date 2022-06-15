@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SubMenu } from './components/SubMenu';
+import { MainMenuStyle } from './MainMenuStyle';
 
 export interface MenuProps {
     id: number;
@@ -13,24 +14,25 @@ export const MainMenu: React.FC<MenuItems> = ({ items }) => {
     const [subMenuActive, setActiveSubMenu] = useState(-1);
 
     return (
-        <div>
-            <ul>
-                {items.map((value) => (
-                    <div>
-                        <li
-                            key={value.id}
-                            onMouseOut={() => setActiveSubMenu(-1)}
-                            onMouseOver={() => {
-                                console.log(value.id);
-                                setActiveSubMenu(value.id);
-                            }}
-                        >
-                            {value.name}
-                        </li>
-                        {subMenuActive !== value.id ? <></> : <SubMenu items={value.sub} />}
-                    </div>
-                ))}
-            </ul>
-        </div>
+        <MainMenuStyle.WrappedMainMenu>
+            {items.map((value) => (
+                <div
+                    tabIndex={value.id}
+                    role="menu"
+                    key={value.id}
+                    onMouseOut={() => setActiveSubMenu(-1)}
+                    onBlur={() => setActiveSubMenu(-1)}
+                    onFocus={() => {
+                        setActiveSubMenu(value.id);
+                    }}
+                    onMouseOver={() => {
+                        setActiveSubMenu(value.id);
+                    }}
+                >
+                    {value.name}
+                    {subMenuActive !== value.id ? <></> : <SubMenu items={value.sub} />}
+                </div>
+            ))}
+        </MainMenuStyle.WrappedMainMenu>
     );
 };

@@ -5,7 +5,6 @@ interface SubMenuItems {
 }
 
 export const SubMenu: React.FC<SubMenuItems> = ({ items }) => {
-    console.log(items);
     return (
         <div>
             <ul>

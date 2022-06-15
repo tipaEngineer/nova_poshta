@@ -28,7 +28,7 @@ module.exports = {
         radix: 'error',
         'space-before-blocks': 'error',
         'import/prefer-default-export': 'off',
-        'prettier/prettier':["errors", {'endOfLine':'auto'}]
+        'prettier/prettier':2
     },
     overrides: [
         {
